@@ -11,14 +11,7 @@ const App = () => {
   // sync up with, if any.
   const [character, setCharacter] = useState([])
 
-  useEffect(() => {
-    axios.get(`https://swapi.dev/api/people`)
-    .then(res => {
-      console.log(res)
-    // .then(res => {
-    //   setCharacter()
-    })
-  })
+  useEffect()
 
   return (
     <div className="App">
