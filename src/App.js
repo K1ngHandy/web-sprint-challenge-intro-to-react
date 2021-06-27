@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from 'react';
+import styled from 'styled-components'
+import Character from './components/Character'
 import './App.css';
 
 const App = () => {
@@ -10,11 +12,14 @@ const App = () => {
   // sync up with, if any.
   const [character, setCharacter] = useState([])
 
-  useEffect()
+  useEffect(() => {
+    console.log(`Character is {character}`)  
+  })
 
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
+      {character.map(data => <Character name={data.name}/>)}
     </div>
   );
 }
