@@ -13,7 +13,8 @@ const App = () => {
   const [character, setCharacter] = useState([])
 
   useEffect(() => {
-    console.log(`Character is {character}`)  
+    axios.get('https://swapi.dev/api/people')
+    .then({data}) => setCharacter(data)
   })
 
   return (
