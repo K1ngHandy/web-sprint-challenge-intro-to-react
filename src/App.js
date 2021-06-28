@@ -15,12 +15,12 @@ const App = () => {
 
   useEffect(() => {
     axios.get(`https://swapi.dev/api/people`)
-    .then(res => {
-      console.log(res.data)
-    })
     // .then(res => {
-    //   setCharacter(res.data)
+    //   console.log(res.data)
     // })
+    .then(res => {
+      setCharacter(res.data)
+    })
     .catch(err => console.log(err))
   }, [])
 
@@ -35,3 +35,4 @@ const App = () => {
 }
 
 export default App;
+
