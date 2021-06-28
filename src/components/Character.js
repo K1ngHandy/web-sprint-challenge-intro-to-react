@@ -19,8 +19,11 @@ const Character = () => {
 
     return (
         <Name>
-            Character: {character.map(char => {
-                return console.log()
+            Character:
+            {character.map(char => {
+                return <ul>
+                    <List>{char.name}</List>
+                </ul>
             })}
         </Name>
     )
@@ -31,4 +34,9 @@ export default Character;
 const Name = styled.p`
     font-weight: bold;
     color: blue;
+`
+
+const List = styled.p`
+    color: black;
+
 `
