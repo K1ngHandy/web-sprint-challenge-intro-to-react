@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios'
 import styled from 'styled-components'
-import Character from './components/Character'
-import handlers from './components/Character'
+// import Character from './components/Character'
 import './App.css';
 
 const App = () => {
@@ -15,18 +14,22 @@ const App = () => {
   const [character, setCharacter] = useState([])
 
   useEffect(() => {
-    axios.get()
+    axios.get(`https://swapi.dev/api/people`)
     .then(res => {
-      console.log(setCharacter(res))
+      console.log(res.data)
     })
-    // .then(({data}) => setCharacter(data))
+    // .then(res => {
+    //   setCharacter(res.data)
+    // })
     .catch(err => console.log(err))
-  })
+  }, [])
 
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-      {character.map(data => <Character name={data.name}/>)}
+      {/* {
+      character.map(char => <Character name={char.name}/>)}
+      } */}
     </div>
   );
 }
