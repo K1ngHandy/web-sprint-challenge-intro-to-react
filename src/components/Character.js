@@ -19,11 +19,10 @@ const Character = () => {
 
     return (
         <Name>
-            Character:
             {character.map(char => {
-                return <ul>
-                    <List>{char.name}</List>
-                </ul>
+                return <List>
+                    {char.name}
+                </List>
             })}
         </Name>
     )
@@ -31,12 +30,12 @@ const Character = () => {
 
 export default Character;
 
-const Name = styled.p`
+const Name = styled.div`
     font-weight: bold;
     color: blue;
 `
 
-const List = styled.p`
+const List = styled.ul`
     color: black;
 
 `

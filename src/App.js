@@ -13,8 +13,9 @@ const App = () => {
 
   return (
     <Container className="App">
-      <Header className="Header">Star Wars Characters</Header>
-      <Character />
+      <Header className="Header">Star Wars Characters:
+        <Character />
+      </Header>
     </Container>
   );
 }
